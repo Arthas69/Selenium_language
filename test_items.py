@@ -14,8 +14,8 @@ class TestLanguage:
         browser.get(link)
         # time.sleep(10)
         element = WebDriverWait(browser, 10).until(
-            ec.visibility_of_element_located((By.CSS_SELECTOR, 'button.btn-add-to-basket'))
+            ec.visibility_of_element_located((By.CSS_SELECTOR, '#add_to_basket_form > button'))
         )
-        button_classes = element.get_attribute('class')
+        test_attr = element.get_attribute('class')
 
-        assert 'btn-add-to-basket' in button_classes, 'Not the needed button'
+        assert 'btn-add-to-basket' in test_attr, 'Not the needed button'
