@@ -9,7 +9,7 @@ link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
 
 class TestLanguage:
 
-    def test_find_button_on_espanol(self, browser):
+    def test_busket_button_text_on_espanol(self, browser):
         browser.get(link)
         element = WebDriverWait(browser, 10).until(
             ec.visibility_of_element_located((By.CSS_SELECTOR, 'button.btn-add-to-basket'))
@@ -20,7 +20,7 @@ class TestLanguage:
 
     # @pytest.mark.xfail
     # @pytest.mark.skip
-    # def test_find_button_on_francais(self, browser):
+    # def test_busket_button_text_on_francais(self, browser):
     #     browser.get(link)
     #     element = WebDriverWait(browser, 10).until(
     #         ec.visibility_of_element_located((By.CSS_SELECTOR, 'button.btn-add-to-basket'))
